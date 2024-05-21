@@ -1,0 +1,17 @@
+{ 
+    "python.terminal.activateEnvironment": true,
+    "python.defaultInterpreterPath": "~\\anaconda3\\envs\\django_env\\python.exe",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "black-formatter.args": [
+        "--line-length=100",
+        "--skip-string-normalization"
+    ],
+    "flake8.args": [
+        "--max-line-length=100",
+        "--ignore=E131,E302",
+    ],
+}

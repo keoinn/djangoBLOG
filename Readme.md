@@ -1,0 +1,1 @@
+# Course for Django Blog 

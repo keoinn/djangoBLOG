@@ -1,0 +1,14 @@
+{% extends 'scaffolds/base.html' %}
+{% block title %} Django CMS {% endblock %}
+
+{% block headmessage %} Welcome to My Blog {% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <a href="/post/{{post.slug}}">
+        <p class="post_title" >{{ post.title }}</p>
+    </a>
+    {% endfor %}
+{% endblock %}
+
+{% block js_script %}{% endblock %}

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Django CMS</title>
+        <style>
+            .post_title {
+                font-family: 微軟正黑體;
+                font-size: 16pt;
+                font-weight: bold;
+            }
+            .post_body {
+                font-family: 微軟正黑體;
+                font-size: 10pt;
+                letter-spacing: 1pt;
+            }
+            .post_date {
+                font-family: 微軟正黑體;
+                font-size: 10pt;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Welcome to My Blog </h1>
+        <hr>
+        {% for post in posts %}
+            <a href="/post/{{post.slug}}">
+                <p class="post_title" >{{ post.title }}</p>
+            </a>
+        {% endfor %}
+        <h3> 現在時間: {{now}} </h3>
+    </body>
+</html>

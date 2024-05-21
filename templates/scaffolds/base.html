@@ -1,0 +1,18 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>
+       {% block title %} {% endblock %}
+    </title>
+    {% include 'components/header.css.html' %}
+</head>
+<body>
+    <div class="post_title"><h3>{% block headmessage %}{% endblock %}</h3></div>
+    <hr>
+    {% block content %}{% endblock %}
+    <hr>
+    {% include 'components/footer.html' %}
+</body>
+</html>
+{% block js_script %}{% endblock %}

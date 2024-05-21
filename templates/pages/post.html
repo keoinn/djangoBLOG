@@ -1,0 +1,13 @@
+{% extends 'scaffolds/base.html' %}
+{% block title %} Django CMS {% endblock %}
+
+{% block headmessage %} {{post.title}} {% endblock %}
+
+{% block content %}
+    <p class="post_content" >{{ post.content }}</p>
+    <p class="post_date" >{{ post.pub_date }}</p>
+    <hr>
+    <h3><a href='/'> 回首頁 </a></h3>
+{% endblock %}
+
+{% block js_script %}{% endblock %}
