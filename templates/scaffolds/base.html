@@ -5,14 +5,46 @@
     <title>
        {% block title %} {% endblock %}
     </title>
+    {% load static %}
     {% include 'components/header.css.html' %}
+    {% include 'components/pages.style.lib.html' %}
+    <link href="{% static 'styles/main.css' %}" rel="stylesheet">
+    <script src="{% static 'scripts/main.js' %}"></script>
 </head>
-<body>
-    <div class="post_title"><h3>{% block headmessage %}{% endblock %}</h3></div>
-    <hr>
-    {% block content %}{% endblock %}
-    <hr>
-    {% include 'components/footer.html' %}
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <div class="app-wrapper">
+        {% include 'components/navbar.html'%}
+        {% include 'components/sidebar.html'%}
+        <main class="app-main">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include 'components/footer.html' %}
+    </div> 
 </body>
 </html>
+{%include 'components/pages.script.lib.html' %}
+<script>
+    const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+    const Default = {
+        scrollbarTheme: "os-theme-light",
+        scrollbarAutoHide: "leave",
+        scrollbarClickScroll: true,
+    };
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+        if (
+            sidebarWrapper &&
+            typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+        ) {
+            OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                scrollbars: {
+                    theme: Default.scrollbarTheme,
+                    autoHide: Default.scrollbarAutoHide,
+                    clickScroll: Default.scrollbarClickScroll,
+                },
+            });
+        }
+    });
+</script>
 {% block js_script %}{% endblock %}

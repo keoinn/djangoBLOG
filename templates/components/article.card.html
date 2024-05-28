@@ -1,0 +1,22 @@
+
+<div class="row pb-3">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title display-1">{{ post.title }}</h3>
+                <div class="card-tools"> <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse"> <i data-lte-icon="expand" class="bi bi-plus-lg"></i> <i data-lte-icon="collapse" class="bi bi-dash-lg"></i> </button> <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove"> <i class="bi bi-x-lg"></i> </button> </div>
+            </div>
+            <div class="card-body">
+                {% if showReadMore %}
+                    {{ post.content | truncatechars:100 }}
+                    <br>
+                    <a href="post/{{post.slug}}"> 閱讀更多... </a>
+                {% else %}
+                    {% load markdown_tag %}
+                    {{ post.content | markdown | safe | linebreaks }}
+                {% endif %}
+            </div> <!-- /.card-body -->
+            <div class="card-footer"> 發表時間：{{ post.pub_date }}</div> <!-- /.card-footer-->
+        </div>
+    </div>
+</div>

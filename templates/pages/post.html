@@ -1,13 +1,14 @@
 {% extends 'scaffolds/base.html' %}
+{% with hasPageTitle=True pageTitle="" %} {% endwith %}
 {% block title %} Django CMS {% endblock %}
 
-{% block headmessage %} {{post.title}} {% endblock %}
 
 {% block content %}
-    <p class="post_content" >{{ post.content }}</p>
-    <p class="post_date" >{{ post.pub_date }}</p>
-    <hr>
+{% include 'components/page.header.html' with hasPageTitle=True pageTitle="貼文"%}
+<div class="app-content">
+    {% include "components/article.card.html" with post=post %}
     <h3><a href='/'> 回首頁 </a></h3>
+</div> 
 {% endblock %}
 
 {% block js_script %}{% endblock %}

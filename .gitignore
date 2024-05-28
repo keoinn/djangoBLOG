@@ -136,3 +136,18 @@ GitHub.sublime-settings
 # !.vscode/launch.json 
 # !.vscode/extensions.json 
 .history
+.DS_Store
+
+# Virtual Envirment
+django_env
+django_env/*
+
+# public static
+public/assets/*
+!public/assets/.gitkeep
+
+# secret file
+credentials.json
+blog_post/management/commands/client_screct.yaml
+blog_post/management/commands/credentials.json
+

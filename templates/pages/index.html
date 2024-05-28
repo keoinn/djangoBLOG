@@ -1,14 +1,13 @@
 {% extends 'scaffolds/base.html' %}
 {% block title %} Django CMS {% endblock %}
 
-{% block headmessage %} Welcome to My Blog {% endblock %}
-
 {% block content %}
+{% include 'components/page.header.html'%}
+<div class="app-content">
     {% for post in posts %}
-    <a href="/post/{{post.slug}}">
-        <p class="post_title" >{{ post.title }}</p>
-    </a>
+        {% include "components/article.card.html" with post=post showReadMore=True %}
     {% endfor %}
+</div> 
 {% endblock %}
 
 {% block js_script %}{% endblock %}

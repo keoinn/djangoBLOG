@@ -1,0 +1,24 @@
+{% load static %}
+<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+    <!-- Logo 小橫幅 -->
+    <div class="sidebar-brand">  
+        <a href="/" class="brand-link"> <!--begin::Brand Image-->
+            <img src="{% static "images/logo.png" %}" alt="Logo" class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> 
+            <span class="brand-text fw-light">我的記事本</span>
+        </a>
+    </div>
+
+     <!-- Menu -->
+    <div class="sidebar-wrapper">
+        <nav class="mt-2">
+            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                <li class="nav-item"> <a href="admin" class="nav-link"> <i class="nav-icon bi bi-speedometer"></i>
+                    <p>管理後台</p>
+                </a> </li>
+                <li class="nav-item"> <a href="admin" class="nav-link"> <i class="nav-icon bi bi-speedometer"></i>
+                    <p>功能新增中</p>
+                </a> </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

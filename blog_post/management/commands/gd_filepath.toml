@@ -1,0 +1,15 @@
+[[gd_dest]]
+order = 0
+name = 'Django Backup Files'
+
+[[gd_dest]]
+order = 1
+name = 'DjangoBLOG'
+
+[[sync_files]]
+name = 'db.sqlite3'
+path = 'db.sqlite3'
+
+[[sync_files]]
+name = 'upload.zip'
+path = 'tmp/upload.zip'
