@@ -66,7 +66,7 @@ TEMPLATES = [
             ],
             "libraries": {
                 "markdown_tag": "libraries.filter.markdown_filter",
-            }
+            },
         },
     },
 ]
@@ -121,9 +121,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / 'public/assets'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-    ]
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -132,6 +130,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # GCP API Console id and token
 GCP_API_CONSOLE_APP_PATH = "blog_post/management/commands/"
-GCP_API_CONSOLE_CLIENT_SCRECT_FILENAME = "client_screct.test.yaml"
-GCP_API_CONSOLE_ID = None
-GCP_API_CONSOLE_SECRET = None
+GCP_API_CONSOLE_CLIENT_SCRECT_FILENAME = "client_screct.yaml"
+GCP_API_CONSOLE_ID = 'YOUR ID'
+GCP_API_CONSOLE_SECRET = 'YOUR SECRET'
