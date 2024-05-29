@@ -129,3 +129,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# GCP API Console id and token
+GCP_API_CONSOLE_APP_PATH = "blog_post/management/commands/"
+GCP_API_CONSOLE_CLIENT_SCRECT_FILENAME = "client_screct.test.yaml"
+GCP_API_CONSOLE_ID = None
+GCP_API_CONSOLE_SECRET = None
